@@ -1,0 +1,28 @@
+[2025-04-18 04:08:07] [INFO] Proxy server logging initialized
+[2025-04-18 04:08:07] [INFO] Proxy server starting up
+[2025-04-18 04:08:07] [INFO] Setting port number to 8088
+[2025-04-18 04:08:07] [INFO] Creating proxy server socket
+[2025-04-18 04:08:07] [INFO] Successfully bound to port 8088
+[2025-04-18 04:08:07] [INFO] Server listening for connections
+[2025-04-18 04:08:07] [INFO] Cache initialized: Max size=209715200 bytes, Max element size=10485760 bytes
+[2025-04-18 04:08:25] [INFO] Client connected from 127.0.0.1:57577 (socket=5)
+[2025-04-18 04:08:38] [INFO] Client disconnected
+[2025-04-18 04:08:53] [INFO] Client connected from 127.0.0.1:57604 (socket=5)
+[2025-04-18 04:08:53] [INFO] Client disconnected
+[2025-04-18 04:08:54] [INFO] Client connected from 127.0.0.1:57608 (socket=5)
+[2025-04-18 04:09:24] [INFO] Client disconnected
+[2025-04-18 04:12:22] [INFO] Client connected from 127.0.0.1:57754 (socket=5)
+[2025-04-18 04:12:22] [INFO] Cache MISS - Forwarding request to origin server
+[2025-04-18 04:12:22] [ERROR] Request parsing failed
+[2025-04-18 04:12:22] [ERROR] 400 Bad Request sent to client
+[2025-04-18 04:12:22] [INFO] Client connected from 127.0.0.1:57756 (socket=5)
+[2025-04-18 04:12:22] [INFO] Cache MISS - Forwarding request to origin server
+[2025-04-18 04:12:22] [ERROR] Request parsing failed
+[2025-04-18 04:12:22] [ERROR] 400 Bad Request sent to client
+[2025-04-18 16:14:38] [INFO] Proxy server logging initialized
+[2025-04-18 16:14:38] [INFO] Proxy server starting up
+[2025-04-18 16:14:38] [INFO] Setting port number to 8088
+[2025-04-18 16:14:38] [INFO] Creating proxy server socket
+[2025-04-18 16:14:38] [INFO] Successfully bound to port 8088
+[2025-04-18 16:14:38] [INFO] Server listening for connections
+[2025-04-18 16:14:38] [INFO] Cache initialized: Max size=209715200 bytes, Max element size=10485760 bytes
