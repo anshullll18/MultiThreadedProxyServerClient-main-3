@@ -1,35 +1,206 @@
-[2025-04-18 20:00:37] [INFO] Proxy server logging initialized
-[2025-04-18 20:00:37] [INFO] Proxy server starting up
-[2025-04-18 20:00:37] [INFO] Setting port number to 8088
-[2025-04-18 20:00:37] [INFO] Creating proxy server socket
-[2025-04-18 20:00:37] [INFO] Successfully bound to port 8088
-[2025-04-18 20:00:37] [INFO] Server listening for connections
-[2025-04-18 20:00:37] [INFO] Proxy cache initialized. Max size: 209715200 bytes
-[2025-04-18 20:00:37] [INFO] Waiting for client connections...
-[2025-04-18 20:01:39] [INFO] Accepted connection from client 127.0.0.1:53353
-[2025-04-18 20:01:39] [INFO] Accepted connection from client 127.0.0.1:53355
-[2025-04-18 20:01:39] [INFO] Handling request for www.cs.princeton.edu/
-[2025-04-18 20:01:39] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.edu
-[2025-04-18 20:01:40] [INFO] Successfully connected to remote server www.cs.princeton.edu:80
-[2025-04-18 20:01:41] [INFO] Transfer complete. Total bytes: 448
-[2025-04-18 20:01:41] [INFO] Added element to cache, size: 509 bytes, URL: www.cs.princeton.edu, new total: 509 bytes
-[2025-04-18 20:01:41] [INFO] Response cached successfully for www.cs.princeton.edu
-[2025-04-18 20:01:42] [INFO] Client disconnected
-[2025-04-18 20:02:36] [INFO] Accepted connection from client 127.0.0.1:53637
-[2025-04-18 20:02:36] [INFO] Handling request for www.cs.princeton.edu/
-[2025-04-18 20:02:36] [INFO] Cache HIT - Serving response from cache for key: www.cs.princeton.edu
-[2025-04-18 20:02:36] [INFO] Sent 448 bytes from cache to client
-[2025-04-18 20:02:36] [INFO] Accepted connection from client 127.0.0.1:53639
-[2025-04-18 20:02:37] [INFO] Client disconnected
-[2025-04-18 20:03:37] [INFO] Accepted connection from client 127.0.0.1:53929
-[2025-04-18 20:03:37] [INFO] Accepted connection from client 127.0.0.1:53930
-[2025-04-18 20:03:37] [INFO] Handling request for www.cs.princeton.ed/
-[2025-04-18 20:03:37] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.ed
-[2025-04-18 20:03:37] [ERROR] No such host exists: www.cs.princeton.ed
-[2025-04-18 20:03:37] [ERROR] Failed to connect to remote server
-[2025-04-18 20:03:37] [ERROR] Failed to handle request
-[2025-04-18 20:03:37] [ERROR] 500 Internal Server Error sent to client
-[2025-04-18 20:03:37] [INFO] Client disconnected
-[2025-04-18 20:03:37] [INFO] Accepted connection from client 127.0.0.1:53932
-[2025-04-18 20:03:37] [ERROR] Request parsing failed
-[2025-04-18 20:03:37] [ERROR] 400 Bad Request sent to client
+[2025-04-18 21:49:22] [INFO] Proxy server logging initialized
+[2025-04-18 21:49:22] [INFO] Proxy server starting up
+[2025-04-18 21:49:22] [INFO] Setting port number to 8088
+[2025-04-18 21:49:22] [INFO] Creating proxy server socket
+[2025-04-18 21:49:22] [INFO] Successfully bound to port 8088
+[2025-04-18 21:49:22] [INFO] Server listening for connections
+[2025-04-18 21:49:22] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 21:49:22] [INFO] Waiting for client connections...
+[2025-04-18 21:49:22] [INFO] Cache is empty
+[2025-04-18 21:49:31] [INFO] Accepted connection from client 127.0.0.1:55694
+[2025-04-18 21:49:31] [INFO] Cache is empty
+[2025-04-18 21:49:31] [INFO] Accepted connection from client 127.0.0.1:55695
+[2025-04-18 21:49:31] [INFO] Cache is empty
+[2025-04-18 21:49:31] [INFO] Handling request for www.cs.princeton.edu/
+[2025-04-18 21:49:31] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.edu
+[2025-04-18 21:49:32] [INFO] Successfully connected to remote server www.cs.princeton.edu:80
+[2025-04-18 21:49:32] [INFO] Transfer complete. Total bytes: 448
+[2025-04-18 21:49:32] [INFO] Added element to cache, size: 509 bytes, URL: www.cs.princeton.edu, new total: 509 bytes
+[2025-04-18 21:49:32] [INFO] Response cached successfully for www.cs.princeton.edu
+[2025-04-18 21:49:34] [INFO] Client disconnected
+[2025-04-18 21:50:20] [INFO] Accepted connection from client 127.0.0.1:55941
+[2025-04-18 21:50:20] [INFO] Current cache contents:
+[2025-04-18 21:50:20] [INFO] =============================================
+[2025-04-18 21:50:20] [INFO] [1] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 48 seconds)
+[2025-04-18 21:50:20] [INFO] =============================================
+[2025-04-18 21:50:20] [INFO] Total cache elements: 1, Total size: 509/209715200 bytes (266862592.00%)
+[2025-04-18 21:50:20] [INFO] Handling request for www.youtube.com/
+[2025-04-18 21:50:20] [INFO] Cache MISS - Fetching from remote server for key: www.youtube.com
+[2025-04-18 21:50:20] [INFO] Accepted connection from client 127.0.0.1:55943
+[2025-04-18 21:50:20] [INFO] Current cache contents:
+[2025-04-18 21:50:20] [INFO] =============================================
+[2025-04-18 21:50:20] [INFO] [1] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 48 seconds)
+[2025-04-18 21:50:20] [INFO] =============================================
+[2025-04-18 21:50:20] [INFO] Total cache elements: 1, Total size: 509/209715200 bytes (266862592.00%)
+[2025-04-18 21:50:20] [INFO] Successfully connected to remote server www.youtube.com:80
+[2025-04-18 21:50:20] [INFO] Transfer complete. Total bytes: 1735
+[2025-04-18 21:50:20] [INFO] Added element to cache, size: 1791 bytes, URL: www.youtube.com, new total: 2300 bytes
+[2025-04-18 21:50:20] [INFO] Response cached successfully for www.youtube.com
+[2025-04-18 21:50:21] [ERROR] Request parsing failed
+[2025-04-18 21:50:21] [ERROR] 400 Bad Request sent to client
+[2025-04-18 21:50:38] [INFO] Accepted connection from client 127.0.0.1:56032
+[2025-04-18 21:50:38] [INFO] Current cache contents:
+[2025-04-18 21:50:38] [INFO] =============================================
+[2025-04-18 21:50:38] [INFO] [1] URL: www.youtube.com (Size: 1735 bytes, Age: 18 seconds)
+[2025-04-18 21:50:38] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 1 minutes)
+[2025-04-18 21:50:38] [INFO] =============================================
+[2025-04-18 21:50:38] [INFO] Total cache elements: 2, Total size: 2300/209715200 bytes (1205862400.00%)
+[2025-04-18 21:50:38] [INFO] Accepted connection from client 127.0.0.1:56033
+[2025-04-18 21:50:38] [INFO] Current cache contents:
+[2025-04-18 21:50:38] [INFO] =============================================
+[2025-04-18 21:50:38] [INFO] [1] URL: www.youtube.com (Size: 1735 bytes, Age: 18 seconds)
+[2025-04-18 21:50:38] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 1 minutes)
+[2025-04-18 21:50:38] [INFO] =============================================
+[2025-04-18 21:50:38] [INFO] Total cache elements: 2, Total size: 2300/209715200 bytes (1205862400.00%)
+[2025-04-18 21:50:38] [ERROR] Request parsing failed
+[2025-04-18 21:50:38] [ERROR] 400 Bad Request sent to client
+[2025-04-18 21:50:39] [INFO] Client disconnected
+[2025-04-18 21:51:23] [INFO] Accepted connection from client 127.0.0.1:56241
+[2025-04-18 21:51:23] [INFO] Current cache contents:
+[2025-04-18 21:51:23] [INFO] =============================================
+[2025-04-18 21:51:23] [INFO] [1] URL: www.youtube.com (Size: 1735 bytes, Age: 1 minutes)
+[2025-04-18 21:51:23] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 1 minutes)
+[2025-04-18 21:51:23] [INFO] =============================================
+[2025-04-18 21:51:23] [INFO] Total cache elements: 2, Total size: 2300/209715200 bytes (1205862400.00%)
+[2025-04-18 21:51:23] [INFO] Accepted connection from client 127.0.0.1:56242
+[2025-04-18 21:51:23] [INFO] Current cache contents:
+[2025-04-18 21:51:23] [INFO] =============================================
+[2025-04-18 21:51:23] [INFO] [1] URL: www.youtube.com (Size: 1735 bytes, Age: 1 minutes)
+[2025-04-18 21:51:23] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 1 minutes)
+[2025-04-18 21:51:23] [INFO] =============================================
+[2025-04-18 21:51:23] [INFO] Total cache elements: 2, Total size: 2300/209715200 bytes (1205862400.00%)
+[2025-04-18 21:51:24] [INFO] Client disconnected
+[2025-04-18 21:51:24] [INFO] Client disconnected
+[2025-04-18 22:01:33] [INFO] Proxy server logging initialized
+[2025-04-18 22:01:33] [INFO] Proxy server starting up
+[2025-04-18 22:01:33] [INFO] Setting port number to 8088
+[2025-04-18 22:01:33] [INFO] Creating proxy server socket
+[2025-04-18 22:01:33] [INFO] Successfully bound to port 8088
+[2025-04-18 22:01:33] [INFO] Server listening for connections
+[2025-04-18 22:01:33] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 22:01:33] [INFO] Waiting for client connections...
+[2025-04-18 22:01:33] [INFO] Signal handler setup complete. PID: 40992
+[2025-04-18 22:02:14] [INFO] Received signal to display cache contents
+[2025-04-18 22:02:14] [INFO] Cache is empty
+[2025-04-18 22:02:14] [ERROR] Error accepting connection: Interrupted system call
+[2025-04-18 22:02:55] [INFO] Accepted connection from client 127.0.0.1:59262
+[2025-04-18 22:02:55] [INFO] Accepted connection from client 127.0.0.1:59263
+[2025-04-18 22:02:59] [INFO] Client disconnected
+[2025-04-18 22:02:59] [INFO] Client disconnected
+[2025-04-18 22:03:09] [INFO] Accepted connection from client 127.0.0.1:59325
+[2025-04-18 22:03:09] [INFO] Accepted connection from client 127.0.0.1:59327
+[2025-04-18 22:03:09] [INFO] Client disconnected
+[2025-04-18 22:03:09] [INFO] Client disconnected
+[2025-04-18 22:04:05] [INFO] Accepted connection from client 127.0.0.1:59583
+[2025-04-18 22:04:05] [INFO] Handling request for www.cs.princeton.edu/
+[2025-04-18 22:04:05] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.edu
+[2025-04-18 22:04:05] [INFO] Accepted connection from client 127.0.0.1:59585
+[2025-04-18 22:04:06] [INFO] Successfully connected to remote server www.cs.princeton.edu:80
+[2025-04-18 22:04:07] [INFO] Transfer complete. Total bytes: 448
+[2025-04-18 22:04:07] [INFO] Added element to cache, size: 509 bytes, URL: www.cs.princeton.edu, new total: 509 bytes
+[2025-04-18 22:04:07] [INFO] Response cached successfully for www.cs.princeton.edu
+[2025-04-18 22:04:09] [INFO] Client disconnected
+[2025-04-18 22:04:23] [INFO] Accepted connection from client 127.0.0.1:59677
+[2025-04-18 22:04:23] [INFO] Accepted connection from client 127.0.0.1:59678
+[2025-04-18 22:04:23] [INFO] Handling request for iris.nitk.ac.in/hrms/
+[2025-04-18 22:04:23] [INFO] Cache MISS - Fetching from remote server for key: iris.nitk.ac.in/hrms
+[2025-04-18 22:04:23] [INFO] Successfully connected to remote server iris.nitk.ac.in:80
+[2025-04-18 22:04:23] [INFO] Transfer complete. Total bytes: 411
+[2025-04-18 22:04:23] [INFO] Added element to cache, size: 472 bytes, URL: iris.nitk.ac.in/hrms, new total: 981 bytes
+[2025-04-18 22:04:23] [INFO] Response cached successfully for iris.nitk.ac.in/hrms
+[2025-04-18 22:04:24] [INFO] Client disconnected
+[2025-04-18 22:04:48] [INFO] Received signal to display cache contents
+[2025-04-18 22:04:48] [INFO] Current cache contents:
+[2025-04-18 22:04:48] [INFO] =============================================
+[2025-04-18 22:04:48] [INFO] [1] URL: iris.nitk.ac.in/hrms (Size: 411 bytes, Age: 25 seconds)
+[2025-04-18 22:04:48] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 41 seconds)
+[2025-04-18 22:04:48] [INFO] =============================================
+[2025-04-18 22:04:48] [INFO] Total cache elements: 2, Total size: 981/209715200 bytes (514326528.00%)
+[2025-04-18 22:04:48] [ERROR] Error accepting connection: Interrupted system call
+[2025-04-18 22:13:25] [INFO] Proxy server logging initialized
+[2025-04-18 22:13:25] [INFO] Proxy server starting up
+[2025-04-18 22:13:25] [INFO] Setting port number to 8088
+[2025-04-18 22:13:25] [INFO] Creating proxy server socket
+[2025-04-18 22:13:25] [INFO] Successfully bound to port 8088
+[2025-04-18 22:13:25] [INFO] Server listening for connections
+[2025-04-18 22:13:25] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 22:13:25] [INFO] Waiting for client connections...
+[2025-04-18 22:13:25] [INFO] Signal handler setup complete. PID: 41670
+[2025-04-18 22:14:53] [INFO] Proxy server logging initialized
+[2025-04-18 22:14:53] [INFO] Proxy server starting up
+[2025-04-18 22:14:53] [INFO] Setting port number to 8088
+[2025-04-18 22:14:53] [INFO] Creating proxy server socket
+[2025-04-18 22:14:53] [INFO] Successfully bound to port 8088
+[2025-04-18 22:14:53] [INFO] Server listening for connections
+[2025-04-18 22:14:53] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 22:14:53] [INFO] Waiting for client connections...
+[2025-04-18 22:15:21] [INFO] Accepted connection from client 127.0.0.1:62531
+[2025-04-18 22:15:21] [INFO] Accepted connection from client 127.0.0.1:62533
+[2025-04-18 22:15:21] [INFO] Handling request for www.cs.princeton.edu/
+[2025-04-18 22:15:21] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.edu
+[2025-04-18 22:15:22] [INFO] Successfully connected to remote server www.cs.princeton.edu:80
+[2025-04-18 22:15:22] [INFO] Transfer complete. Total bytes: 448
+[2025-04-18 22:15:22] [INFO] Added element to cache, size: 509 bytes, URL: www.cs.princeton.edu, new total: 509 bytes
+[2025-04-18 22:15:22] [INFO] Response cached successfully for www.cs.princeton.edu
+[2025-04-18 22:15:25] [INFO] Client disconnected
+[2025-04-18 22:16:15] [INFO] Accepted connection from client 127.0.0.1:62775
+[2025-04-18 22:16:15] [INFO] Accepted connection from client 127.0.0.1:62776
+[2025-04-18 22:16:15] [INFO] Handling request for iris.nitk.ac.in/hrms/
+[2025-04-18 22:16:15] [INFO] Cache MISS - Fetching from remote server for key: iris.nitk.ac.in/hrms
+[2025-04-18 22:16:16] [INFO] Successfully connected to remote server iris.nitk.ac.in:80
+[2025-04-18 22:16:16] [INFO] Transfer complete. Total bytes: 411
+[2025-04-18 22:16:16] [INFO] Added element to cache, size: 472 bytes, URL: iris.nitk.ac.in/hrms, new total: 981 bytes
+[2025-04-18 22:16:16] [INFO] Response cached successfully for iris.nitk.ac.in/hrms
+[2025-04-18 22:16:20] [INFO] Client disconnected
+[2025-04-18 22:17:50] [INFO] Proxy server logging initialized
+[2025-04-18 22:17:50] [INFO] Proxy server starting up
+[2025-04-18 22:17:50] [INFO] Setting port number to 8088
+[2025-04-18 22:17:50] [INFO] Creating proxy server socket
+[2025-04-18 22:17:50] [INFO] Successfully bound to port 8088
+[2025-04-18 22:17:50] [INFO] Server listening for connections
+[2025-04-18 22:17:50] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 22:17:50] [INFO] Waiting for client connections...
+[2025-04-18 22:18:48] [INFO] Proxy server logging initialized
+[2025-04-18 22:18:48] [INFO] Proxy server starting up
+[2025-04-18 22:18:48] [INFO] Setting port number to 8088
+[2025-04-18 22:18:48] [INFO] Creating proxy server socket
+[2025-04-18 22:18:48] [INFO] Successfully bound to port 8088
+[2025-04-18 22:18:48] [INFO] Server listening for connections
+[2025-04-18 22:18:48] [INFO] Proxy cache initialized. Max size: 209715200 bytes
+[2025-04-18 22:18:48] [INFO] Waiting for client connections...
+[2025-04-18 22:18:48] [INFO] Signal handler setup complete. PID: 42134
+[2025-04-18 22:18:56] [INFO] Received signal to display cache contents
+[2025-04-18 22:18:56] [INFO] Cache is empty
+[2025-04-18 22:18:56] [ERROR] Error accepting connection: Interrupted system call
+[2025-04-18 22:19:30] [INFO] Accepted connection from client 127.0.0.1:63647
+[2025-04-18 22:19:30] [INFO] Handling request for www.cs.princeton.edu/
+[2025-04-18 22:19:30] [INFO] Cache MISS - Fetching from remote server for key: www.cs.princeton.edu
+[2025-04-18 22:19:30] [INFO] Accepted connection from client 127.0.0.1:63649
+[2025-04-18 22:19:31] [INFO] Successfully connected to remote server www.cs.princeton.edu:80
+[2025-04-18 22:19:31] [INFO] Transfer complete. Total bytes: 448
+[2025-04-18 22:19:31] [INFO] Added element to cache, size: 509 bytes, URL: www.cs.princeton.edu, new total: 509 bytes
+[2025-04-18 22:19:31] [INFO] Response cached successfully for www.cs.princeton.edu
+[2025-04-18 22:19:34] [INFO] Client disconnected
+[2025-04-18 22:19:58] [INFO] Accepted connection from client 127.0.0.1:63774
+[2025-04-18 22:19:58] [INFO] Handling request for iris.nitk.ac.in/hrms/
+[2025-04-18 22:19:58] [INFO] Cache MISS - Fetching from remote server for key: iris.nitk.ac.in/hrms
+[2025-04-18 22:19:58] [INFO] Accepted connection from client 127.0.0.1:63776
+[2025-04-18 22:19:58] [INFO] Successfully connected to remote server iris.nitk.ac.in:80
+[2025-04-18 22:19:59] [INFO] Transfer complete. Total bytes: 411
+[2025-04-18 22:19:59] [INFO] Added element to cache, size: 472 bytes, URL: iris.nitk.ac.in/hrms, new total: 981 bytes
+[2025-04-18 22:19:59] [INFO] Response cached successfully for iris.nitk.ac.in/hrms
+[2025-04-18 22:19:59] [INFO] Client disconnected
+[2025-04-18 22:21:26] [INFO] Received signal to display cache contents
+[2025-04-18 22:21:26] [INFO] Current cache contents:
+[2025-04-18 22:21:26] [INFO] =============================================
+[2025-04-18 22:21:26] [INFO] [1] URL: iris.nitk.ac.in/hrms (Size: 411 bytes, Age: 1 minutes)
+[2025-04-18 22:21:26] [INFO] [2] URL: www.cs.princeton.edu (Size: 448 bytes, Age: 1 minutes)
+[2025-04-18 22:21:26] [INFO] =============================================
+[2025-04-18 22:21:26] [INFO] Total cache elements: 2, Total size: 981/209715200 bytes (514326528.00%)
+[2025-04-18 22:21:26] [ERROR] Error accepting connection: Interrupted system call
+[2025-04-18 22:22:15] [INFO] Accepted connection from client 127.0.0.1:64359
+[2025-04-18 22:22:15] [INFO] Accepted connection from client 127.0.0.1:64360
+[2025-04-18 22:22:15] [INFO] Handling request for www.cs.princeton.edu/
+[2025-04-18 22:22:15] [INFO] Cache HIT - Serving response from cache for key: www.cs.princeton.edu
+[2025-04-18 22:22:15] [INFO] Sent 448 bytes from cache to client
+[2025-04-18 22:22:19] [INFO] Client disconnected

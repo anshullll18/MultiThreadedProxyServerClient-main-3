@@ -17,6 +17,7 @@
 #include <time.h>
 #include <stdarg.h>
 #include <ctype.h>  // For tolower function
+#include <signal.h>
 
 #define MAX_BYTES 4096    //max allowed size of request/response
 #define MAX_CLIENTS 400     //max number of client requests served at a time
@@ -56,6 +57,8 @@ void log_message(int level, const char* format, ...);
 void init_logger(const char* log_file_path);
 void close_logger();
 const char* get_log_level_str(int level);
+void signal_handler(int sig);
+void setup_signal_handler();
 
 int port_number = 8080;             // Default Port
 int proxy_socketId;                 // socket descriptor of proxy server
@@ -512,7 +515,7 @@ cache_element* find(char* url) {
     cache_element* site = NULL;
     int temp_lock_val = pthread_mutex_lock(&lock);
     log_message(LOG_DEBUG, "Cache search lock acquired: %d", temp_lock_val); 
-    printf("inside find\n");
+    // printf("inside find\n");
     if(head != NULL) {
         site = head;
         while(site != NULL) {
@@ -636,6 +639,72 @@ void set_log_level(const char* level_str) {
     }
 }
 
+// Function to display all URLs in the cache
+void display_cache_contents() {
+    pthread_mutex_lock(&lock);
+    
+    if (head == NULL) {
+        log_message(LOG_INFO, "Cache is empty");
+        pthread_mutex_unlock(&lock);
+        return;
+    }
+    
+    log_message(LOG_INFO, "Current cache contents:");
+    log_message(LOG_INFO, "=============================================");
+    
+    cache_element* current = head;
+    int count = 0;
+    time_t current_time = time(NULL);
+    
+    while (current != NULL) {
+        char age_buffer[64];
+        long age_seconds = current_time - current->lru_time_track;
+        
+        // Format the age nicely
+        if (age_seconds < 60) {
+            snprintf(age_buffer, sizeof(age_buffer), "%ld seconds", age_seconds);
+        } else if (age_seconds < 3600) {
+            snprintf(age_buffer, sizeof(age_buffer), "%ld minutes", age_seconds / 60);
+        } else {
+            snprintf(age_buffer, sizeof(age_buffer), "%ld hours", age_seconds / 3600);
+        }
+        
+        log_message(LOG_INFO, "[%d] URL: %s (Size: %d bytes, Age: %s)",
+                   ++count, current->url, current->len, age_buffer);
+        
+        current = current->next;
+    }
+    
+    log_message(LOG_INFO, "=============================================");
+    log_message(LOG_INFO, "Total cache elements: %d, Total size: %d/%d bytes (%.2f%%)",
+               count, cache_size, MAX_SIZE, (cache_size * 100.0) / MAX_SIZE);
+    
+    pthread_mutex_unlock(&lock);
+}
+
+void signal_handler(int sig) {
+    if (sig == SIGUSR1) {
+        log_message(LOG_INFO, "Received signal to display cache contents");
+        display_cache_contents();
+    }
+}
+
+void setup_signal_handler() {
+    struct sigaction sa;
+    memset(&sa, 0, sizeof(sa));
+    sa.sa_handler = signal_handler;
+    sigaction(SIGUSR1, &sa, NULL);
+    
+    // Print instructions for the user
+    printf("\n");
+    printf("===================================================\n");
+    printf("To view cache contents, use the following command:\n");
+    printf("kill -SIGUSR1 %d\n", getpid());
+    printf("===================================================\n\n");
+    
+    log_message(LOG_INFO, "Signal handler setup complete. PID: %d", getpid());
+}
+
 int main(int argc, char * argv[]) {
     // printf("main\n");
     // Initialize logger first
@@ -707,8 +776,9 @@ cache_size = 0;
 
 log_message(LOG_INFO, "Proxy cache initialized. Max size: %d bytes", MAX_SIZE);
 log_message(LOG_INFO, "Waiting for client connections...");
-
+setup_signal_handler();
 while(1) {
+    // display_cache_contents();
     client_len = sizeof(client_addr);
     
     // Accept connection from client
